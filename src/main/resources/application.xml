@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <!-- spring 的上下文配置 -->
+    <context:annotation-config/>
+
+    <!-- 设置使用注解的类所在的包 -->
+    <context:component-scan base-package="cn.test"/>
+
+    <!-- spring-mvc配置 -->
+    <import resource="spring-mvc.xml"/>
+
+    <!--&lt;!&ndash; 导入DAO配置 &ndash;&gt;-->
+    <!--<import resource="spring-dao.xml"/>-->
+
+    <!--&lt;!&ndash; 导入数据库配置 &ndash;&gt;-->
+    <!--<import resource="spring-mybatis.xml"/>-->
+
+    <!-- 导入activiti配置 -->
+    <import resource="activiti.cfg.xml"/>
+
+</beans>
